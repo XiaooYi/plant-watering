@@ -14,6 +14,8 @@
   支持用户记录和查看植物的养护历史，方便跟踪植物的生长状态。
 
 ---
+## 效果图
+<img width="1274" height="670" alt="plant" src="https://github.com/user-attachments/assets/d67cfb8a-42f6-4979-8a60-5112595cbac7" />
 
 ## 访问地址  
 [植物养护助手](https://traeshop-democdis-six.vercel.app/)
