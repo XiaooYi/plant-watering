@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>植物养护助手</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">植物养护助手</p>
+          <h1>轻松记录每次浇水，掌握植物最佳状态</h1>
+          <p class="subtitle">
+            记录浇水时间、养护内容与植物状态，让园丁爱好者不再纠结“上次是否浇过水”。
+          </p>
+        </div>
+        <div class="hero-card">
+          <h2>今日提醒</h2>
+          <ul>
+            <li>绿萝：距离上次浇水 5 天</li>
+            <li>多肉植物：距离上次浇水 10 天</li>
+            <li>薄荷：距离上次浇水 3 天</li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>植物选择</h2>
+          <p>选择植物并查看类别信息</p>
+        </div>
+        <div class="plant-grid" id="plant-grid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>添加养护记录</h2>
+          <p>填写一次浇水与养护内容</p>
+        </div>
+        <form class="record-form" id="record-form">
+          <label>
+            选择植物
+            <select name="plant" id="plant-select" required></select>
+          </label>
+          <label>
+            记录日期与时间
+            <input type="datetime-local" name="datetime" id="record-datetime" required />
+          </label>
+          <label>
+            状态备注
+            <input
+              type="text"
+              name="note"
+              id="record-note"
+              placeholder="例如：状态良好，叶片有新芽"
+              required
+            />
+          </label>
+          <button type="submit">保存记录</button>
+        </form>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>最近养护记录</h2>
+          <p>最新三条记录概览</p>
+        </div>
+        <div class="recent-records" id="recent-records"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>养护历史</h2>
+          <p>完整记录帮助追踪植物状态</p>
+        </div>
+        <div class="history" id="history"></div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
